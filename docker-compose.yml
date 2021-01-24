@@ -1,0 +1,41 @@
+version: "3"
+services:
+  app:
+    build: .
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - 3000:3000
+    command: yarn serve
+    networks:
+      - app-network
+    environment:
+      DB_URL: db
+      DB_PORT: 3306
+      DB_USER: 'user'
+      DB_PASSWORD: 'password'
+      DB_NAME: 'organization_structure'
+      DB_POOL_SIZE: 10,
+      PORT: 3000
+  db:
+    container_name: maria-db
+    image: mariadb
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: 'organization_structure'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'password'
+      MYSQL_ROOT_PASSWORD: 'password'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    command: --init-file /data/application/init.sql
+    volumes:
+        - ./init.sql:/data/application/init.sql
+    networks:
+      - app-network
+networks:
+  app-network:
+    driver: bridge

@@ -1,0 +1,50 @@
+path.link {
+    stroke: #80808054;
+}
+
+.main-panel {
+    padding: 10px;
+}
+
+.board-title {
+    font-size: 18px;
+    padding: 0 30px 20px;
+    margin: 0 -20px 10px;
+    border-bottom: 1px solid #cad7dc;
+}
+
+.search {
+    margin-left: 10px;
+    max-width: 640px;
+}
+
+.node {
+    cursor: pointer;
+}
+
+.tree-container {
+    overflow-x: auto;
+}
+
+form {
+    max-width: 640px;
+}
+
+svg {
+    min-width: 100% !important;
+}
+
+svg > g {
+    transform:translate(20px, 0)
+}
+
+.ts-modal > .ts-panel > .ts-box {
+    position: relative;
+    margin: 0 auto;
+    padding: 30px;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+}
+
+
