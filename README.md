@@ -52,3 +52,5 @@ Use ```yarn test``` to run the test.
 ___
 
 A high level API doc is available [here](https://documenter.getpostman.com/view/8855737/SVmySHoe?version=latest) with couple of examples.
+
+*Note: I have not written unit testing for the front end code as I felt it was growing a bit complex I have a mix of react and the ts components*
