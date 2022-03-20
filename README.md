@@ -43,6 +43,8 @@ Use ```docker-compose stop``` to stop the application.
 
 Docker will enable the node server, and a mariadb instance once you run the above command.
 
+To start the application locally without docker use `yarn start`
+
 ## Test
 ---
 
